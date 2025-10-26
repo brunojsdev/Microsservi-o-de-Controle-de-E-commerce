@@ -1,0 +1,31 @@
+### TESTE 1: INICIAR ESTOQUE (Microsserviço WAREHOUSE - Porta 8082)
+# O Warehouse precisa ter o produto em estoque antes de processar um pedido.
+
+POST http://localhost:8082/produtos
+Content-Type: application/json
+
+{
+    "nome": "SmartWatch X",
+    "quantidadeEstoque": 12
+}
+
+### TESTE 2: CONSULTAR ESTOQUE (Microsserviço WAREHOUSE - Porta 8082)
+
+GET http://localhost:8082/produtos
+
+### TESTE 3: CRIAR PEDIDO (Microsserviço STOREFRONT - Porta 8081)
+# ESTE É O TESTE DE COMUNICAÇÃO: O Storefront liga para o Warehouse.
+# Esperado: Storefront envia a requisição, e o estoque no Warehouse cai.
+
+POST http://localhost:8081/pedidos
+Content-Type: application/json
+
+{
+    "produtoNome": "SmartWatch X",
+    "quantidade": 5
+}
+
+### TESTE 4: VERIFICAR RESULTADO DO ESTOQUE (Warehouse)
+# Esperado: A quantidade de 'SmartWatch X' deve ser 7 (12 - 5 = 7)
+
+GET http://localhost:8082/produtos

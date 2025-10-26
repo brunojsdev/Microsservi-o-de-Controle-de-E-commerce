@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-WarehouseApplication<warehouse>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.ecommerce.warehouse.WarehouseApplication",
+      "projectName": "warehouse",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
