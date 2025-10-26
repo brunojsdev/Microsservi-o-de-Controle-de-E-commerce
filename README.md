@@ -19,10 +19,9 @@ O projeto original incluía mensageria assíncrona via RabbitMQ. Devido a proble
 * **Build Tool:** Apache Maven
 
 ## Como Executar o Projeto
-1.  **Clonar o Repositório:** `git clone https://www.youtube.com/watch?v=X49Wz3icO3E`
-2.  **Iniciar o Warehouse:** Executar a classe `WarehouseApplication.java` (inicia na porta **8082**).
-3.  **Iniciar o Storefront:** Executar a classe `StorefrontApplication.java` (inicia na porta **8081**).
-4.  **Testes (Usando REST Client ou Postman):**
+1.  **Iniciar o Warehouse:** Executar a classe `WarehouseApplication.java` (inicia na porta **8082**).
+2.  **Iniciar o Storefront:** Executar a classe `StorefrontApplication.java` (inicia na porta **8081**).
+3.  **Testes (Usando REST Client ou Postman):**
     * **1. Iniciar Estoque (Warehouse):**
         ```http
         POST http://localhost:8082/produtos
